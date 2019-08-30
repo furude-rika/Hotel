@@ -698,7 +698,98 @@ contactPageElem.className = 'custom-element'
 // document.body.appendChild(contactPageElem)
 
 
+//REGISTRATION-USER
+class RegistrationPageElement extends HTMLElement {
+	constructor() {
+		super()
+		let wrapper = document.createElement('div')
+		wrapper.className = 'registration-page-element'
 
+		//top-container
+		this.container = document.createElement('div')
+		this.container.className = 'top-container'
+		wrapper.appendChild(this.container)
+
+		//main-container
+		this.main = document.createElement('div')
+		this.main.className = 'main-container'
+		wrapper.appendChild(this.main)
+
+		this.container.innerHTML = `<h1>account</h1>`
+		this.main.innerHTML = `
+			<div class="forms">
+				<div class="form-for-users">
+					<div class="form-content">
+						<div class="h-container">
+							<h3>already a member</h3>
+						</div>
+						<h2>Sign In</h2>
+						<form class="form">
+							<div class="input">
+								<h4>Username :</h4>
+								<input type="text" name="">
+							</div>
+							<div class="input">
+								<h4>Password :</h4>
+								<input type="text" name="">
+							</div>
+							<div class="check-input">
+								<input type="checkbox" name="option-1"><b>Remember Me</b>
+							</div>
+							<div class="send-anchor">
+								<a href="">sing in</a>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="registration-form">
+					<div class="form-content">
+						<div class="h-container">
+							<h3>i don't have an account</h3>
+						</div>
+						<h2>Sing Up</h2>
+						<form class="form">
+							<div class="input">
+								<h4>Username :</h4>
+								<input type="text" name="">
+							</div>
+							<div class="input">
+								<h4>Password :</h4>
+								<input type="text" name="">
+							</div>
+							<div class="input">
+								<h4>Email :</h4>
+								<input type="email" name="">
+							</div>
+							<div class="input">
+								<h4>Firstname :</h4>
+								<input type="text" name="">
+							</div>
+							<div class="input">
+								<h4>Lastname :</h4>
+								<input type="text" name="">
+							</div>
+							<div class="send-anchor">
+								<a href="">sign up</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		`
+		let style = document.createElement('style')
+		style.innerHTML = `@import url(css/registration-styles.css)`
+
+		this.shadow = this.attachShadow({mode: 'open'})
+
+		this.shadow.appendChild(style)
+		this.shadow.appendChild(wrapper)
+	}
+}
+
+customElements.define('registration-user-element', RegistrationPageElement)
+let registrationPageElem = document.createElement('registration-user-element')
+registrationPageElem.className = 'custom-element'
 
 //test-click-links
 
@@ -741,4 +832,11 @@ let contactPageLink = document.getElementById('contact-page')
 contactPageLink.onclick = function click(event) {
 	removeCustomElements()
 	document.body.insertBefore(contactPageElem, document.getElementById('footer'))
+}
+
+let registationUserLink = document.getElementById('registration-page')
+
+registationUserLink.onclick = function click(event) {
+	removeCustomElements()
+	document.body.insertBefore(registrationPageElem, document.getElementById('footer'))
 }
