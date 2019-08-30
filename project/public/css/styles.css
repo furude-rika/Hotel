@@ -1,0 +1,192 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 180px;
+}
+
+.bookings, .account {
+	width: 12%;
+	margin: 0;
+}
+
+.account a, .bookings a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-decoration: none;
+	margin: 0;
+	vertical-align: bottom;
+}
+
+.account a {
+	padding: 7px 10px;
+	color: #fff;
+	background-color: #DEB887;
+}
+
+.bookings a {
+	color: #4a4646;
+	background-color: #fff;
+}
+
+.account img {
+	width: 25px;
+	height: 25px;
+}
+
+.account p {
+	margin: 0;
+}
+
+.log-in {
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 12px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+	background-color: #1C1818;
+	font-family: 'Roboto', sans-serif;
+}
+
+.header-logo-container {
+	text-align: center;
+	padding: 15px 10px;
+}
+
+.header-logo-container a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.header-logo-container h2 {
+	font-size: 17px;
+	opacity: 0.6;
+	text-transform: uppercase;
+}
+
+.header-logo-container h6 {
+	font-size: 8px;
+	color: #DEB887;
+	opacity: 0.5;
+	text-transform: uppercase;
+}
+
+.header-logo-container h2,
+.header-logo-container h6 {
+	margin: 0;
+	letter-spacing: 4px;
+}
+
+.header-logo-container a:hover h2 {
+	color: #fff;
+	opacity: 0.9;
+}
+
+.header-logo-container a:hover h6 {
+	opacity: 0.9;
+}
+
+.main-nav {width: 35%;}
+
+.nav-list {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+.nav-list li {
+	list-style-type: none;
+	list-style-position: inside;
+}
+
+.nav-list li a {
+	text-decoration: none;
+	color: #DEB887;
+	opacity: 0.5;
+	font-size: 14px;
+}
+
+.nav-list li a:hover {
+	color: #fff;
+	opacity: 0.8;
+}
+
+
+#footer {
+	width: 100%;
+	margin: 0;
+	background-color: #1C1818;
+	font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.footer-container h3 {
+	color: #fff;
+	opacity: 0.9;
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+.footer-container h6 {
+	margin-top: 0;
+	color: #A9A9A9;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-weather img {
+	width: 30px;
+}
+
+.social-icons img {
+	width: 30px;
+	color: #fff;
+}
+
+.footer-news input {
+	background-color: #0a0808;
+	border: 1px solid #0a0808;
+	padding: 10px 20px 10px 10px;
+}
+
+.footer-news input:focus {
+	outline: none;
+}
+
+.footer-news a {
+	text-decoration: none;
+	border: 1px solid #DEB887;
+	background-color: #DEB887;
+	color: #fff;
+	font-size: 12px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+}

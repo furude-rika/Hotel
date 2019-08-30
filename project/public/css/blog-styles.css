@@ -1,0 +1,150 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.top-container {
+	background-image: url(../images/top/top-image-blog.jpg);
+	background-size: cover;
+}
+
+.top-container h1 {
+	margin: 0;
+	text-align: center;
+	color: #fff;
+	padding: 100px 0;
+	font-size: 45px;
+}
+
+.blog-container {
+	margin: 50px auto;
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.dinner, 
+.around-us, 
+.relax {
+	width: 32%;
+}
+
+.dinner img, .around-us img {
+	max-width: 100%;
+}
+
+.dinner-content :not(img), 
+.around-content :not(img){
+	margin-left: 20px;
+	padding-right: 10px;
+}
+
+.dinner-content h6, 
+.around-us h6 {
+	margin-bottom: 0;
+}
+
+.dinner-content h2, 
+.around-us h2 {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+
+.dinner-content p, .around-us p {
+	line-height: 22px;
+	color: #4a4646;
+}
+
+.read-anchor {
+	margin: 30px 0 50px;
+}
+
+.read-anchor a {
+	text-decoration: none;
+	color: #DEB887;
+	border: 1px solid #DEB887;
+	padding: 10px 30px;
+	font-size: 14px;
+	margin: 0;
+}
+
+.read-anchor a:hover {
+	background-color: #DEB887;
+	color: #fff;
+}
+
+.check-events {
+	background-color: #1C1818;
+	text-align: center;
+}
+
+.check-events h2 {
+	color: #fff;
+	opacity: 0.8;
+	padding: 35px;
+	margin: 0;
+}
+
+.follow {
+	text-align: center;
+	background-color: #DEB887;
+	color: #fff;
+	margin: 0 0 20px;
+	padding: 15px;
+}
+
+.follow h4 {
+	font-size: 20px;
+}
+
+.follow h5 {
+	font-size: 12px;
+}
+
+.follow hr {
+	width: 40px;
+	border: none;
+	height: 1px;
+	background-color: #fff;
+}
+
+.first-relax-zone img {
+	margin-bottom: 20px;
+}
+
+.first-relax-zone img, 
+.second-relax-zone img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+.first-relax-zone, 
+.second-relax-zone {
+	position: relative;
+}
+
+.relax-content {
+	position: absolute;
+	bottom: 40px;
+	margin: 0 0 0 20px;
+	color: #fff;
+}
+
+.relax-content h4, 
+.relax-content h6 {
+	margin: 10px 0 0;
+}
+
+.relax-content a, 
+.relax-content a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	margin-top: 10px;
+}

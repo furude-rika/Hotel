@@ -1,0 +1,283 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+.top-container {
+	background-image: url(../images/top/top-img.jpg);
+	margin: 0;
+	display: flex;
+	min-width: 100vh;
+	align-items: center;
+	justify-content: flex-start;
+	background-size: cover;
+	font-family: 'Halant', serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+.top-text-content {
+	color: #fff;
+	margin: 0 auto;
+	padding: 70px 100px;
+	text-align: center;
+	opacity: 0.9;
+}
+
+.top-text-content h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.top-text-content p {
+	margin: 20px 0 30px;
+	font-size: 50px;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+hr {width: 30px;}
+
+.top-button a {
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.top-button a:hover {
+	background-color: #DEB887;
+	border: 1px solid #DEB887;
+	opacity: 1;
+}
+
+.data {
+	background-color: #fff;
+	margin-top: 100px;
+	width: 500px;
+	height: 120px;
+}
+
+.about-content {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+.text-about-content, .about-images {
+	max-width: 50%;
+}
+
+.about-images img {
+	max-width: 300px;
+}
+
+.text-about-content {
+	text-align: center;
+	padding: 20px 30px;
+}
+
+.text-about-content h1 {
+	font-size: 35px;
+	color: #2b2626;
+}
+
+.text-about-content h6 {
+	color: #4a4646;
+	text-transform: uppercase;
+}
+
+.text-about-content p {
+	line-height: 23px;
+	color: #4a4646;
+}
+
+.about-anchor {
+	margin-top: 40px;
+}
+
+.about-anchor a {
+	background-color: #DEB887;
+	border: 1px solid #DEB887;
+	text-decoration: none;
+	padding: 10px 40px;
+	font-size: 13px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.about-anchor a:hover {
+	background-color: #fff;
+	color: #DEB887;
+}
+
+.about-images {
+	position: relative;
+}
+
+.third-img {
+	z-index: 1;
+	top: 0;
+	right: 200px;
+	position: absolute;
+}
+
+.second-img {
+	z-index: 2;
+	top: 30px;
+	right: 30px;
+	position: absolute;
+}
+
+.first-img {
+	z-index: 3;
+	top: 175px;
+	right: 200px;
+	position: absolute;
+}
+
+.locations-container {
+	max-width: 100%;
+	display: flex;
+	background-color: #1C1818;
+}
+
+.location-images, 
+.locations-description {
+	width: 50%;
+}
+
+.location-images {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.location-images img {
+	max-width: 50%;
+}
+
+.locations-description {
+	padding: 40px 40px 30px 70px;
+}
+
+.text-location-content {
+	display: flex;
+	justify-content: space-between;
+	color: #696969;
+	line-height: 22px;
+	font-size: 13px;
+}
+
+.locations-description h6 {
+	color: #A9A9A9;
+	text-transform: uppercase;
+}
+
+.locations-description h1 {
+	font-size: 35px;
+	line-height: 45px;
+	margin-bottom: 0;
+	color: #fff;
+	opacity: 0.7;
+	font-family: 'Roboto', sans-serif 100;
+	text-transform: uppercase;
+}
+
+.change-color {
+	color: #DEB887;
+}
+
+.text-location-content a {
+	color: #696969;
+}
+
+.location-anchor {
+	margin-top: 20px;
+}
+
+.location-anchor a {
+	text-decoration: none;
+	color: #fff;
+	padding: 12px 30px;
+	background-color: #000;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.phrase-container {
+	text-align: center;
+	padding: 30px;
+	line-height: 25px;
+	color: #4a4646;
+}
+
+.places-container {
+	background-color: #F5F5F5;
+	border: 1px solid #F5F5F5;
+}
+
+.places {
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px auto;
+	background-color: #fff;
+}
+
+.places-content, .places-img {
+	max-width: 50%;
+}
+
+.places-content {
+	padding: 40px;
+	text-align: center;
+}
+
+.places-content h6 {
+	margin-bottom: 0;
+	color: #4a4646;
+	text-transform: uppercase;
+}
+
+.places-content hr {
+	width: 30px;
+}
+
+.places-content h1 {
+	font-size: 26px;
+	color: #2b2626;
+}
+
+.places-content p {
+	font-size: 14px;
+	letter-spacing: 0.8px;
+	line-height: 20px;
+	color: #4a4646;
+}
+
+.read-anchour {
+	margin-top: 40px;
+}
+
+.read-anchour a {
+	text-decoration: none;
+	padding: 10px 30px;
+	font-size: 12px;
+	border: 1px solid #DEB887;
+	color: #DEB887;
+}
+
+.read-anchour a:hover {
+	background-color: #DEB887;
+	color: #fff;
+}
+
+.places-img img {
+	max-width: 100%;
+	vertical-align: top;
+}

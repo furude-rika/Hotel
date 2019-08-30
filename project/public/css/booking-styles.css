@@ -1,0 +1,158 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.top-container {
+	background-image: url(../images/top/top-second-img-1.jpg);
+	background-size: cover;
+}
+
+.top-container h1 {
+	margin: 0;
+	text-align: center;
+	color: #fff;
+	padding: 100px 0;
+	font-size: 45px;
+}
+
+.booking-container {
+	margin: 50px auto;
+	width: 70%;
+	display: flex;
+}
+
+.booking-reservation {width: 30%;}
+
+.booking-reservation img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+.check-in-out {
+	text-align: center;
+	background-color: #1C1818;
+}
+
+.check-in-out h3 {
+	margin: 0;
+	padding-top: 20px;
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.check-flex {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+.chek-in, .chek-out,
+.guests, .nights {
+	width: 45%;
+	background-color: #000;
+	border: 1px solid #000;
+	color: #fff;
+	opacity: 0.5;
+}
+
+.chek-in, .chek-out {margin-bottom: 20px;}
+
+.total-price {
+	background-color: #000;
+	text-align: center;
+}
+
+.total-price h3 {
+	color: #fff;
+	opacity: 0.5;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.booking-form {
+	width: 70%;
+	padding: 0 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.booking-form h2 {margin-top: 0;}
+
+.extra-services {
+	max-width: 95%;
+	margin-bottom: 60px;
+	font-size: 14px;
+}
+
+.servise-flex {
+	display: flex;
+	justify-content: space-between;
+	line-height: 30px;
+}
+
+.add-information {font-size: 14px;}
+
+.information-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.top-inputs {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.input {
+	width: 50%;
+}
+
+.input input {
+	width: 90%;
+	padding: 8px 5px;
+	border: 1px solid #D3D3D3;
+	border-radius: 3px;
+	background-color: #F5F5F5;
+	outline: none;
+}
+
+.input h4, .textarea h4 {
+	margin-bottom: -8px;
+	color: #696969;
+	font-size: 14px;
+}
+
+.textarea {width: 100%;}
+
+.textarea textarea {
+	width: 95%;
+	height: 150px;
+	resize: none;
+	border: 1px solid #D3D3D3;
+	border-radius: 3px;
+	background-color: #F5F5F5;
+	padding: 8px 5px;
+	outline: none;
+}
+
+.sub-inputs {display: flex;}
+
+.submit {margin: 30px 0;}
+
+.submit a {
+	text-decoration: none;
+	background-color: #DEB887;
+	border: 1px solid #DEB887;
+	color: #fff;
+	padding: 10px 30px;
+	font-size: 12px;
+}
