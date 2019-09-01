@@ -366,7 +366,6 @@ customElements.define('rooms-page-element', RoomsPageElement)
 
 let roomsPageElem = document.createElement('rooms-page-element')
 roomsPageElem.className = 'custom-element'
-// document.body.appendChild(roomsPageElem)
 
 
 //BOOKING-COMPONENT
@@ -505,7 +504,6 @@ customElements.define('booking-page-element', BookingPageElement)
 
 let bookingPageElem = document.createElement('booking-page-element')
 bookingPageElem.className = 'custom-element'
-// document.body.appendChild(bookingPageElem)
 
 
 //BLOG-COMPONENT
@@ -594,7 +592,6 @@ customElements.define('blog-page-element', BlogPageElement)
 
 let blogPageElem = document.createElement('blog-page-element')
 blogPageElem.className = 'custom-element'
-// document.body.appendChild(blogPageElem)
 
 
 //CONTACT-COMPONENT
@@ -695,7 +692,6 @@ class ContactPageElement extends HTMLElement {
 customElements.define('contact-page-element', ContactPageElement)
 let contactPageElem = document.createElement('contact-page-element')
 contactPageElem.className = 'custom-element'
-// document.body.appendChild(contactPageElem)
 
 
 //REGISTRATION-USER
@@ -791,9 +787,8 @@ customElements.define('registration-user-element', RegistrationPageElement)
 let registrationPageElem = document.createElement('registration-user-element')
 registrationPageElem.className = 'custom-element'
 
-//test-click-links
 
-let homePageLink = document.getElementById('home-page')
+//test-click-links
 
 function removeCustomElements() {
 	let tags = document.getElementsByClassName('custom-element')
@@ -801,42 +796,17 @@ function removeCustomElements() {
 		.forEach(elem => elem.remove())
 }
 
-homePageLink.onclick = function click(event) {
-	removeCustomElements()
-	document.body.insertBefore(mainMenuElem, document.getElementById('footer'))
-}
+testClick('home-page', mainMenuElem)
+testClick('rooms-page', roomsPageElem)
+testClick('bookings-page', bookingPageElem)
+testClick('blog-page', blogPageElem)
+testClick('contact-page', contactPageElem)
+testClick('registration-page', registrationPageElem)
 
-let roomsPageLink = document.getElementById('rooms-page')
-
-roomsPageLink.onclick = function click(event) {
-	removeCustomElements()
-	document.body.insertBefore(roomsPageElem, document.getElementById('footer'))
-}
-
-let bookingsPageLink = document.getElementById('bookings-page')
-
-bookingsPageLink.onclick = function click(event) {
-	removeCustomElements()
-	document.body.insertBefore(bookingPageElem, document.getElementById('footer'))
-}
-
-let blogPageLink = document.getElementById('blog-page')
-
-blogPageLink.onclick = function click(event) {
-	removeCustomElements()
-	document.body.insertBefore(blogPageElem, document.getElementById('footer'))
-}
-
-let contactPageLink = document.getElementById('contact-page')
-
-contactPageLink.onclick = function click(event) {
-	removeCustomElements()
-	document.body.insertBefore(contactPageElem, document.getElementById('footer'))
-}
-
-let registationUserLink = document.getElementById('registration-page')
-
-registationUserLink.onclick = function click(event) {
-	removeCustomElements()
-	document.body.insertBefore(registrationPageElem, document.getElementById('footer'))
+function testClick(elemId, elem) {
+	let nameLink = document.getElementById(elemId)
+	nameLink.onclick = function click(event) {
+		removeCustomElements()
+		document.body.insertBefore(elem, document.getElementById('footer'))
+	}
 }
