@@ -723,17 +723,17 @@ class RegistrationPageElement extends HTMLElement {
 						<form class="form">
 							<div class="input">
 								<h4>Username :</h4>
-								<input type="text" name="">
+								<input type="text" name="userName" placeholder="Your Name">
 							</div>
 							<div class="input">
 								<h4>Password :</h4>
-								<input type="text" name="">
+								<input type="password" name="passWord" placeholder="Your Password">
 							</div>
 							<div class="check-input">
 								<input type="checkbox" name="option-1"><b>Remember Me</b>
 							</div>
 							<div class="send-anchor">
-								<a href="">sing in</a>
+								<button>sing in</button>
 							</div>
 						</div>
 					</form>
@@ -744,29 +744,38 @@ class RegistrationPageElement extends HTMLElement {
 							<h3>i don't have an account</h3>
 						</div>
 						<h2>Sing Up</h2>
-						<form class="form">
+						<form id="regForm">
 							<div class="input">
 								<h4>Username :</h4>
-								<input type="text" name="">
+								<input type="text" name="userName" placeholder="Your Name">
 							</div>
 							<div class="input">
 								<h4>Password :</h4>
-								<input type="text" name="">
+								<input type="password" name="passWord" id="passWord-1" placeholder="Your Password">
 							</div>
 							<div class="input">
+								<h4>Repeat Your Password :</h4>
+								<input type="password" name="passWord" id="passWord-2" placeholder="Your Password" disabled="">
+							</div>
+							<input type="hidden" value="" name="pass-hash" id="pass-hash">
+							<div class="input">
 								<h4>Email :</h4>
-								<input type="email" name="">
+								<input type="email" name="email" placeholder="Your Email">
 							</div>
 							<div class="input">
 								<h4>Firstname :</h4>
-								<input type="text" name="">
+								<input type="text" name="firstName" placeholder="Your Firstname">
 							</div>
 							<div class="input">
 								<h4>Lastname :</h4>
-								<input type="text" name="">
+								<input type="text" name="lastName" placeholder="Your Lastname">
+							</div>
+							<div class="photoInput">
+								<h4>Upload your photo :</h4>
+								<input type="file" name="photoURL" id="loadPhotoInput">
 							</div>
 							<div class="send-anchor">
-								<a href="">sign up</a>
+								<button id="register-button">sign up</button>
 							</div>
 						</form>
 					</div>
@@ -802,6 +811,8 @@ testClick('bookings-page', bookingPageElem)
 testClick('blog-page', blogPageElem)
 testClick('contact-page', contactPageElem)
 testClick('registration-page', registrationPageElem)
+
+
 
 function testClick(elemId, elem) {
 	let nameLink = document.getElementById(elemId)
