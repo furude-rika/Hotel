@@ -729,11 +729,8 @@ class RegistrationPageElement extends HTMLElement {
 								<h4>Password :</h4>
 								<input type="password" name="passWord" placeholder="Your Password">
 							</div>
-							<div class="check-input">
-								<input type="checkbox" name="option-1"><b>Remember Me</b>
-							</div>
 							<div class="send-anchor">
-								<button>sing in</button>
+								<button>sign in</button>
 							</div>
 						</div>
 					</form>
