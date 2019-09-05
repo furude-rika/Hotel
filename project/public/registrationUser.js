@@ -25,7 +25,7 @@ registrationPageElem.shadowRoot.getElementById("register-button").onclick = func
     formData.forEach (
       ( val, key ) => Object.assign ( result, { [key]: val } )
     )
-    fetch( 'https://furude-rika.github.io/HOTEL/project/db.json', {
+    fetch( 'http://localhost:3000/users', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
