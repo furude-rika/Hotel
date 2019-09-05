@@ -744,18 +744,18 @@ class RegistrationPageElement extends HTMLElement {
 							<h3>i don't have an account</h3>
 						</div>
 						<h2>Sing Up</h2>
-						<form id="regForm">
+						<form id="reg-form">
 							<div class="input">
 								<h4>Username :</h4>
 								<input type="text" name="userName" placeholder="Your Name">
 							</div>
 							<div class="input">
 								<h4>Password :</h4>
-								<input type="password" name="passWord" id="passWord-1" placeholder="Your Password">
+								<input type="password" id="pass-word-1" placeholder="Your Password">
 							</div>
 							<div class="input">
 								<h4>Repeat Your Password :</h4>
-								<input type="password" name="passWord" id="passWord-2" placeholder="Your Password" disabled="">
+								<input type="password" id="pass-word-2" placeholder="Your Password" disabled="">
 							</div>
 							<input type="hidden" value="" name="pass-hash" id="pass-hash">
 							<div class="input">
@@ -772,7 +772,7 @@ class RegistrationPageElement extends HTMLElement {
 							</div>
 							<div class="photoInput">
 								<h4>Upload your photo :</h4>
-								<input type="file" name="photoURL" id="loadPhotoInput">
+								<input type="file" name="photoURL" id="load-photo-input">
 							</div>
 							<div class="send-anchor">
 								<button id="register-button">sign up</button>

@@ -1,5 +1,32 @@
 {
   "users": [
+    {
+      "userName": "Anastasia",
+      "pass-hash": "420ccd88135ec1f05e6f2d82d62dab7df409e599c09292f54fd105839230ba57",
+      "email": "k@kk.k",
+      "firstName": "kk",
+      "lastName": "kk",
+      "photoURL": {},
+      "id": 1
+    },
+    {
+      "userName": "new",
+      "pass-hash": "",
+      "email": "a@a.a",
+      "firstName": "a",
+      "lastName": "a",
+      "photoURL": {},
+      "id": 2
+    },
+    {
+      "userName": "gg",
+      "pass-hash": "158b73a54ea9f2da3e3960426bcfe8e49bfd31fa6eb6b94fc1d99cc74bf2a9d4",
+      "email": "a@a.a",
+      "firstName": "a",
+      "lastName": "aaa",
+      "photoURL": {},
+      "id": 3
+    }
   ],
   "bookings": []
 }
