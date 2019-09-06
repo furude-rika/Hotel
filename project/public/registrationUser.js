@@ -36,5 +36,6 @@ registrationPageElem.shadowRoot.getElementById("register-button").onclick = func
             currentUser = response
             document.cookie = `userId=${currentUser.id}`
             document.cookie = `userPass=${currentUser["pass-hash"]}`
+            // window.location.href = `http://localhost:3000/${currentUser.id}`
         })
 }

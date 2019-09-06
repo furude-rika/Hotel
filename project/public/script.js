@@ -772,7 +772,7 @@ class RegistrationPageElement extends HTMLElement {
 								<input type="file" name="photoURL" id="load-photo-input">
 							</div>
 							<div class="send-anchor">
-								<button id="register-button">sign up</button>
+								<button id="register-button" value="http://localhost:3000/users">sign up</button>
 							</div>
 						</form>
 					</div>
