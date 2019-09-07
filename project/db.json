@@ -2,111 +2,21 @@
   "users": [
     {
       "userName": "Anastasia",
-      "pass-hash": "0dbed075fedcfff40815e18be8400b5b272ab11d562b1ce18525f2221423067f",
+      "pass-hash": "68fe8cc5d66c089121c67639b7710a6b312e6dbc10169c25b818926062ac867e",
       "email": "gr_14a_34@ukr.net",
-      "firstName": "aa",
-      "lastName": "aa",
-      "photoURL": {},
+      "firstName": "Anastasia",
+      "lastName": "Lukina",
+      "photo-url": "blob:http://localhost:3000/da944ca0-3b6d-448f-afde-8d72474a0d8c",
       "id": 1
     },
     {
-      "userName": "Alice",
-      "pass-hash": "957b0a0a6f202e25046068622516f9f4e200754f6986eafea4e9982b9b12d18a",
-      "email": "s@s.s",
-      "firstName": "aw",
-      "lastName": "we",
-      "photoURL": {},
-      "id": 2
-    },
-    {
       "userName": "Denis",
-      "pass-hash": "99baadea923c42df6dab0f0db479196478a3d2ae810b4fa0e8a7d8f123fe1027",
-      "email": "dd@dd.dd",
-      "firstName": "dd",
-      "lastName": "dd",
-      "photoURL": {},
-      "id": 3
-    },
-    {
-      "userName": "IVAN",
-      "pass-hash": "e0c1ef8dfad589f58d0da4710dca31182f11a5a2753d99e2c9098bfa40e6b8f1",
-      "email": "dd@dd.dd",
-      "firstName": "ee",
-      "lastName": "ww",
-      "photoURL": {},
-      "id": 4
-    },
-    {
-      "userName": "user",
-      "pass-hash": "7ea71e6eefc444dae392059d8daf6e36bc37255deec3eb3adecef403cbd0a04a",
-      "email": "d@d.d",
+      "pass-hash": "5d362b073b644e49d6ea42195dc1f08e3d7c0f492eec497f021ac3df3bd636ea",
+      "email": "hy@k.k",
       "firstName": "a",
-      "lastName": "w",
-      "photoURL": {},
-      "id": 5
-    },
-    {
-      "userName": "Tatiana",
-      "pass-hash": "a7aa9a51ccca267c0d72c89019cdcdd770f3e93b5ded4c4e62eec4a9439e4a17",
-      "email": "a@a.a",
-      "firstName": "a",
-      "lastName": "Anastasiaa",
-      "photoURL": {},
-      "id": 6
-    },
-    {
-      "userName": "sss",
-      "pass-hash": "54ecaba718ab711385328b1a3710378c785f38a9555bbe4cba04661791d73137",
-      "email": "a@a.a",
-      "firstName": "aa",
-      "lastName": "aa",
-      "photoURL": {},
-      "id": 7
-    },
-    {
-      "userName": "",
-      "pass-hash": "",
-      "email": "",
-      "firstName": "",
-      "lastName": "",
-      "photoURL": {},
-      "id": 8
-    },
-    {
-      "userName": "new",
-      "pass-hash": "99baadea923c42df6dab0f0db479196478a3d2ae810b4fa0e8a7d8f123fe1027",
-      "email": "dd@dd.dd",
-      "firstName": "w",
-      "lastName": "q",
-      "photoURL": "",
-      "id": 9
-    },
-    {
-      "userName": "new1",
-      "pass-hash": "f00a806e200985afee60bd41c1f37133292aae720c3a5bc16b4cbe2b9c06cd93",
-      "email": "w@w.w",
-      "firstName": "w",
-      "lastName": "w",
-      "photo-url": "",
-      "id": 10
-    },
-    {
-      "userName": "new2",
-      "pass-hash": "10c44e95b2589ff6b227fbfb31b7f00082114ee1071fdf1cc4a1b95e17d9c93c",
-      "email": "q@q.q",
-      "firstName": "q",
-      "lastName": "",
-      "photo-url": "",
-      "id": 11
-    },
-    {
-      "userName": "new4",
-      "pass-hash": "519292cd2be68f0921fc570a409d29a830551cef2a487a9f2a748180af6486e1",
-      "email": "w@w.w",
-      "firstName": "w",
-      "lastName": "w",
-      "photo-url": "",
-      "id": 12
+      "lastName": "a",
+      "photo-url": "blob:http://localhost:3000/02d443bc-8396-4dad-9612-b40d89a12dee",
+      "id": 2
     }
   ],
   "bookings": []

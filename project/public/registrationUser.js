@@ -20,18 +20,19 @@ registrationPageElem.shadowRoot.getElementById("pass-word-2").onchange = functio
 
 let photoReader = registrationPageElem.shadowRoot.getElementById('load-photo-input')
 let img = registrationPageElem.shadowRoot.getElementById('user-photo-preview')
+let hiddenInput = registrationPageElem.shadowRoot.getElementById( "photo-url" )
 
 photoReader.onchange = event => {
     let photo = event.target.files[0]
     if ( photo.type.indexOf ( "image" ) !== 0 || photo.size > 300000) return
     let picture = URL.createObjectURL ( photo )
     img.src = picture
-    registrationPageElem.shadowRoot.getElementById( "photo-url" )[0].value = picture
+    hiddenInput.value = picture
     let reader = new FileReader();
     reader.onload = event => {
         img.src = event.target.result        
     }
-    reader.readAsDataURL(event.target.files[0])
+    reader.readAsDataURL(photo)
 }
 
 let submit = registrationPageElem.shadowRoot.getElementById("register-button")
@@ -54,5 +55,7 @@ submit.onclick = function ( event ) {
             console.log(response.body)
             document.cookie = `userId=${currentUser.id}`
             document.cookie = `userPass=${currentUser["pass-hash"]}`
+            document.getElementById('user-log').innerHTML = `Current User: ${response.userName}`
+            document.getElementById('user-log-photo').src = `${currentUser['photo-url']}`
         })
 }

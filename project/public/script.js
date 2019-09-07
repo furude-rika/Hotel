@@ -811,8 +811,6 @@ testClick('blog-page', blogPageElem)
 testClick('contact-page', contactPageElem)
 testClick('registration-page', registrationPageElem)
 
-
-
 function testClick(elemId, elem) {
 	let nameLink = document.getElementById(elemId)
 	nameLink.onclick = function click(event) {

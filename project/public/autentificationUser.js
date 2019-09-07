@@ -8,11 +8,11 @@ let cookie = Object.assign({},...document.cookie.split('; ')
 )
 
 cookie.userId
-	? fetch(`http://localhost:3000/users/${cookie.userId}`)
+	? fetch( `http://localhost:3000/users/${cookie.userId}` )
 		.then(response => response.json())
 			.then(response => {
 				console.log(`Current User: ${response.userName}`, response)
 				document.getElementById('user-log').innerHTML = `Current User: ${response.userName}`
-				document.getElementById('user-log-photo').src = `${response['photo-url']}`
+				 // = `${response['photo-url']}`
 			})
 				: console.warn('User is not registered')
