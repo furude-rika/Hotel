@@ -11,7 +11,8 @@ cookie.userId
 	? fetch(`http://localhost:3000/users/${cookie.userId}`)
 		.then(response => response.json())
 			.then(response => {
-				console.log(response.userName)
-				document.getElementById('userLog').innerHTML = `Current User: ${response.userName}`
+				console.log(`Current User: ${response.userName}`, response)
+				document.getElementById('user-log').innerHTML = `Current User: ${response.userName}`
+				document.getElementById('user-log-photo').src = `${response['photo-url']}`
 			})
 				: console.warn('User is not registered')

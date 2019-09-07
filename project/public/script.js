@@ -740,7 +740,7 @@ class RegistrationPageElement extends HTMLElement {
 						<div class="h-container">
 							<h3>i don't have an account</h3>
 						</div>
-						<h2>Sing Up</h2>
+						<h2>Sign Up</h2>
 						<form id="reg-form">
 							<div class="input">
 								<h4>Username :</h4>
@@ -769,7 +769,9 @@ class RegistrationPageElement extends HTMLElement {
 							</div>
 							<div class="photoInput">
 								<h4>Upload your photo :</h4>
-								<input type="file" name="photoURL" id="load-photo-input">
+								<input type="file" id="load-photo-input">
+								<img src="images/header/icons/user (1).png" id="user-photo-preview">
+								<input type="hidden" name="photo-url" id="photo-url"> 
 							</div>
 							<div class="send-anchor">
 								<button id="register-button" value="http://localhost:3000/users">sign up</button>
