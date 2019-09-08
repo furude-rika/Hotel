@@ -2,21 +2,30 @@
   "users": [
     {
       "userName": "Anastasia",
-      "pass-hash": "68fe8cc5d66c089121c67639b7710a6b312e6dbc10169c25b818926062ac867e",
-      "email": "gr_14a_34@ukr.net",
+      "pass-hash": "3a1b4ce950353160fd96dbdd0eb8390667d684fdd3a06738a8382814f0761868",
+      "email": "dd@dd.dd",
       "firstName": "Anastasia",
       "lastName": "Lukina",
-      "photo-url": "blob:http://localhost:3000/da944ca0-3b6d-448f-afde-8d72474a0d8c",
+      "photo-url": "blob:http://localhost:3000/0a9fd2d5-4e29-4edb-9fb1-0f762acb8832",
       "id": 1
     },
     {
-      "userName": "Denis",
-      "pass-hash": "5d362b073b644e49d6ea42195dc1f08e3d7c0f492eec497f021ac3df3bd636ea",
-      "email": "hy@k.k",
-      "firstName": "a",
-      "lastName": "a",
-      "photo-url": "blob:http://localhost:3000/02d443bc-8396-4dad-9612-b40d89a12dee",
+      "userName": "Tatiana",
+      "pass-hash": "0dbed075fedcfff40815e18be8400b5b272ab11d562b1ce18525f2221423067f",
+      "email": "k@kk.k",
+      "firstName": "q",
+      "lastName": "l",
+      "photo-url": "blob:http://localhost:3000/c53768b2-fa32-4c8c-9d0f-4ca29c75ef24",
       "id": 2
+    },
+    {
+      "userName": "user",
+      "pass-hash": "74569b15d1520663f0895fec7f8c9939e93b71362e5f7832063f646a97621a43",
+      "email": "l@l.l",
+      "firstName": "alice",
+      "lastName": "as",
+      "photo-url": "blob:http://localhost:3000/b1e08cb6-80d1-4b18-bc56-c01af83c9240",
+      "id": 3
     }
   ],
   "bookings": []

@@ -23,16 +23,14 @@ let img = registrationPageElem.shadowRoot.getElementById('user-photo-preview')
 let hiddenInput = registrationPageElem.shadowRoot.getElementById( "photo-url" )
 
 photoReader.onchange = event => {
+    // document.cookie = "userId=; expires=" + new Date(0).toUTCString()
+    // document.cookie = "userPass=; expires=" + new Date(0).toUTCString()
     let photo = event.target.files[0]
     if ( photo.type.indexOf ( "image" ) !== 0 || photo.size > 300000) return
-    let picture = URL.createObjectURL ( photo )
+    let picture = URL.createObjectURL( photo )
+    console.log(picture)
     img.src = picture
     hiddenInput.value = picture
-    let reader = new FileReader();
-    reader.onload = event => {
-        img.src = event.target.result        
-    }
-    reader.readAsDataURL(photo)
 }
 
 let submit = registrationPageElem.shadowRoot.getElementById("register-button")
@@ -53,9 +51,30 @@ submit.onclick = function ( event ) {
         .then ( response => {
             currentUser = response
             console.log(response.body)
-            document.cookie = `userId=${currentUser.id}`
-            document.cookie = `userPass=${currentUser["pass-hash"]}`
+            document.cookie = `userId=${currentUser.id}; expires=${timeForCookie}`
+            document.cookie = `userPass=${currentUser["pass-hash"]}; expires=${timeForCookie}`
             document.getElementById('user-log').innerHTML = `Current User: ${response.userName}`
             document.getElementById('user-log-photo').src = `${currentUser['photo-url']}`
         })
 }
+
+
+//COOKIE
+let cookie = Object.assign({},...document.cookie.split('; ')
+    .map(item => Object.assign({},{[item.split('=')[0]]:item.split('=')[1]})
+    )
+)
+
+cookie.userId
+    ? fetch( `http://localhost:3000/users/${cookie.userId}` )
+        .then(response => response.json())
+            .then(response => {
+                currentUser = response
+                console.log(`Current User: ${currentUser.userName}`, response)
+                document.getElementById('user-log').innerHTML = `Current User: ${currentUser.userName}`
+                document.getElementById('user-log-photo').src = `${currentUser['photo-url']}`
+            })
+                : console.warn('User is not registered')
+
+
+let timeForCookie = new Date ( new Date().getTime() + 500 * 1000 ).toUTCString()

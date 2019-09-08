@@ -1,3 +1,6 @@
+// import RoomsPageElement from './RoomsPageComponent.js';
+
+
 class MainPageElement extends HTMLElement {
 	constructor() {
 		super()
@@ -361,7 +364,6 @@ class RoomsPageElement extends HTMLElement {
 		this.shadow.appendChild(wrapper)
 	}
 }
-
 customElements.define('rooms-page-element', RoomsPageElement)
 
 let roomsPageElem = document.createElement('rooms-page-element')
