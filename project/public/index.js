@@ -1,6 +1,3 @@
-// import RoomsPageElement from './RoomsPageComponent.js';
-
-
 class MainPageElement extends HTMLElement {
 	constructor() {
 		super()
@@ -620,29 +617,29 @@ class ContactPageElement extends HTMLElement {
 				<p>
 					Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. <br>Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna <br>feugiat ruturn. Nam nulla ipsum, venenatis malesuada felis quis, ulrticies <br>convallis neque. Pellentesque tristique fringilla tempus. Vivamus bibendum nibh <br>in dolor pharetra, a euismod nulla dignissim.
 				</p>
-				<form class="form">
+				<form id="form">
 					<div class="input">
 						<h4>Name :</h4>
-						<input type="text" name="">
+						<input type="text" name="client-name">
 					</div>
 					<div class="input">
 						<h4>Surname :</h4>
-						<input type="text" name="">
+						<input type="text" name="client-surname">
 					</div>
 					<div class="input">
 						<h4>Email :</h4>
-						<input type="text" name="">
+						<input type="email" name="client-email">
 					</div>
 					<div class="input">
 						<h4>Phone :</h4>
-						<input type="text" name="">
+						<input type="text" name="client-phone">
 					</div>
 					<div class="textarea">
 						<h4>Message :</h4>
-						<textarea></textarea>
+						<textarea name="client-message"></textarea>
 					</div>
 					<div class="send-anchor">
-						<a href="">SEND NOW</a>
+						<button id="submit">SEND NOW</button>
 					</div>
 				</form>
 			</div>
@@ -725,14 +722,14 @@ class RegistrationPageElement extends HTMLElement {
 						<form class="form">
 							<div class="input">
 								<h4>Username :</h4>
-								<input type="text" name="userName" placeholder="Your Name">
+								<input type="text" name="userName" placeholder="Your Name" id="autentification-name">
 							</div>
 							<div class="input">
 								<h4>Password :</h4>
-								<input type="password" name="passWord" placeholder="Your Password">
+								<input type="password" name="passWord" placeholder="Your Password" id="autentification-pass">
 							</div>
 							<div class="send-anchor">
-								<button>sign in</button>
+								<button id="autentification-button">sign in</button>
 							</div>
 						</div>
 					</form>

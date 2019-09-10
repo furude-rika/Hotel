@@ -65,16 +65,31 @@ let cookie = Object.assign({},...document.cookie.split('; ')
     )
 )
 
-cookie.userId
-    ? fetch( `http://localhost:3000/users/${cookie.userId}` )
+if ( cookie.userId ) {
+    autentifyUser()
+    registrationPageElem.shadowRoot
+        .getElementById('autentification-pass').style = 'border: 1px solid rgb(225, 0, 0)'
+}
+
+function autentifyUser() {
+    fetch( `http://localhost:3000/users/${cookie.userId}` )
         .then(response => response.json())
             .then(response => {
                 currentUser = response
-                console.log(`Current User: ${currentUser.userName}`, response)
-                document.getElementById('user-log').innerHTML = `Current User: ${currentUser.userName}`
-                document.getElementById('user-log-photo').src = `${currentUser['photo-url']}`
-            })
-                : console.warn('User is not registered')
+                registrationPageElem.shadowRoot.getElementById('autentification-name')
+                    .value = `${currentUser.userName}`
+        })
+}
 
+let autentificationButton = registrationPageElem.shadowRoot.getElementById('autentification-button')
+
+autentificationButton.onclick = event => {
+    fetch(`http://localhost:3000/users/${cookie.userId}`)
+        .then(response => response.json())
+            .then(response => {
+                document.getElementById('user-log').innerHTML = `Current User: ${response.userName}`
+                document.getElementById('user-log-photo').src = `${response['photo-url']}`
+            })
+}
 
 let timeForCookie = new Date ( new Date().getTime() + 500 * 1000 ).toUTCString()

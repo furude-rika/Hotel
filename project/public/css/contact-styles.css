@@ -42,7 +42,7 @@ body {
 	font-size: 15px;
 }
 
-.form {
+#form {
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -79,7 +79,7 @@ body {
 
 .send-anchor {margin: 30px 0;}
 
-.send-anchor a {
+.send-anchor button {
 	text-decoration: none;
 	background-color: #DEB887;
 	border: 1px solid #DEB887;

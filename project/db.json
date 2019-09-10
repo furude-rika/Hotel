@@ -26,7 +26,48 @@
       "lastName": "as",
       "photo-url": "blob:http://localhost:3000/b1e08cb6-80d1-4b18-bc56-c01af83c9240",
       "id": 3
+    },
+    {
+      "userName": "",
+      "pass-hash": "",
+      "email": "",
+      "firstName": "",
+      "lastName": "",
+      "photo-url": "blob:http://localhost:3000/4e0009b4-a7aa-44da-b1f0-94b22b2601e5",
+      "id": 4
     }
   ],
-  "bookings": []
+  "bookings": [],
+  "contacts": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "client-name": "lalal",
+      "client-surname": "llaall",
+      "client-email": "alall",
+      "client-phone": "allala",
+      "client-message": "llala",
+      "id": 3
+    },
+    {
+      "client-name": "Anastasia",
+      "client-surname": "Lukina",
+      "client-email": "gr_14a_34@ukr.net",
+      "client-phone": "0987562452",
+      "client-message": "Hello",
+      "id": 4
+    },
+    {
+      "client-name": "ssss",
+      "client-surname": "sss",
+      "client-email": "gr_14a_34@ukr.net",
+      "client-phone": "ss",
+      "client-message": "dsds",
+      "id": 5
+    }
+  ]
 }
