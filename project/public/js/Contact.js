@@ -92,4 +92,6 @@ class ContactPageElement extends HTMLElement {
 	}
 }
 
+// customElements.define( 'contact-page-element', ContactPageElement )
+
 export default ContactPageElement

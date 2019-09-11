@@ -129,4 +129,6 @@ class BookingPageElement extends HTMLElement {
 	}
 }
 
+// customElements.define( 'booking-page-element', BookingPageElement )
+
 export default BookingPageElement

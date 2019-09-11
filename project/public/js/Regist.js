@@ -94,4 +94,6 @@ class RegistrationPageElement extends HTMLElement {
 	}
 }
 
+// customElements.define( 'registration-user-element', RegistrationPageElement )
+
 export default RegistrationPageElement

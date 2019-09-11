@@ -227,5 +227,6 @@ class RoomsPageElement extends HTMLElement {
 	}
 }
 
+// defineElements( 'rooms-page-element', RoomsPageElement )
+
 export default RoomsPageElement
-// import css from '../css/rooms-styles.css'
