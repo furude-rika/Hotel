@@ -35,6 +35,15 @@
       "lastName": "",
       "photo-url": "blob:http://localhost:3000/4e0009b4-a7aa-44da-b1f0-94b22b2601e5",
       "id": 4
+    },
+    {
+      "userName": "",
+      "pass-hash": "",
+      "email": "",
+      "firstName": "",
+      "lastName": "",
+      "photo-url": "blob:http://localhost:3000/5b04f832-1745-424c-97ad-04d3102c6a0a",
+      "id": 5
     }
   ],
   "bookings": [],

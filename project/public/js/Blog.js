@@ -68,9 +68,9 @@ class BlogPageElement extends HTMLElement {
 				</div>
 			</div>
 		`
-
 		let style = document.createElement('style')
 		style.innerHTML = `@import url(css/blog-styles.css)`
+		// style.innerHTML = `import css from 'css/blog-styles.css'`
 
 		this.shadow = this.attachShadow({mode: 'open'})
 

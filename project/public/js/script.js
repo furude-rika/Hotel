@@ -11,43 +11,38 @@ let mainMenuElem = document.createElement('main-page-element')
 mainMenuElem.className = 'custom-element'
 document.body.appendChild(mainMenuElem)
 
+defineElements( 'rooms-page-element', RoomsPageElement )
+defineElements( 'booking-page-element', BookingPageElement )
+defineElements( 'blog-page-element', BlogPageElement )
+defineElements( 'contact-page-element', ContactPageElement )
+defineElements( 'registration-user-element', RegistrationPageElement )
 
-//ROOMS-COMPONENT
-customElements.define('rooms-page-element', RoomsPageElement)
 
 let roomsPageElem = document.createElement('rooms-page-element')
 roomsPageElem.className = 'custom-element'
 
 
-//BOOKING-COMPONENT
-customElements.define('booking-page-element', BookingPageElement)
-
 let bookingPageElem = document.createElement('booking-page-element')
 bookingPageElem.className = 'custom-element'
 
-
-//BLOG-COMPONENT
-customElements.define('blog-page-element', BlogPageElement)
 
 let blogPageElem = document.createElement('blog-page-element')
 blogPageElem.className = 'custom-element'
 
 
-//CONTACT-COMPONENT
-customElements.define('contact-page-element', ContactPageElement)
 let contactPageElem = document.createElement('contact-page-element')
 contactPageElem.className = 'custom-element'
 
 
-//REGISTRATION-USER
-
-customElements.define('registration-user-element', RegistrationPageElement)
 let registrationPageElem = document.createElement('registration-user-element')
 registrationPageElem.className = 'custom-element'
 
 
-//test-click-links
+function defineElements( tagName, compName ) {
+    return customElements.define( tagName, compName )
+}
 
+//test-click-links
 function removeCustomElements() {
 	let tags = document.getElementsByClassName('custom-element')
 	Array.from(tags)
@@ -69,32 +64,32 @@ function testClick(elemId, elem) {
 	}
 }
 
-
 //REGISTRATION
 
 let currentUser = null
 
-registrationPageElem.shadowRoot.getElementById("pass-word-1").oninput = function ( event ) {
+let registElem = registrationPageElem.shadowRoot
+
+registElem.getElementById("pass-word-1").oninput = function ( event ) {
     let pass = event.target.value
     event.target.valid = pass.length > 6 && !!pass.match ( /\d/ ) && !!pass.match ( /\D/ )
     event.target.style.color = event.target.valid ? "green" : "red"
-    registrationPageElem.shadowRoot.getElementById("pass-word-2").disabled = !event.target.valid
+    registElem.getElementById("pass-word-2").disabled = !event.target.valid
 }
 
-registrationPageElem.shadowRoot.getElementById("pass-word-2").oninput = function ( event ) {
-    event.target.valid = event.target.value === registrationPageElem.shadowRoot.getElementById("pass-word-1").value
+registElem.getElementById("pass-word-2").oninput = function ( event ) {
+    event.target.valid = event.target.value === registElem.getElementById("pass-word-1").value
     event.target.style.color = event.target.valid ? "green" : "red"
 }
 
-registrationPageElem.shadowRoot.getElementById("pass-word-2").onchange = function ( event ) {
+registElem.getElementById("pass-word-2").onchange = function ( event ) {
     event.target.valid ?
-        registrationPageElem.shadowRoot.getElementById("pass-hash")
-            .value = Sha256.hash(event.target.value) : null
+        registElem.getElementById("pass-hash").value = Sha256.hash(event.target.value) : null
 }
 
-let photoReader = registrationPageElem.shadowRoot.getElementById('load-photo-input')
-let img = registrationPageElem.shadowRoot.getElementById('user-photo-preview')
-let hiddenInput = registrationPageElem.shadowRoot.getElementById( "photo-url" )
+let photoReader = registElem.getElementById('load-photo-input')
+let img = registElem.getElementById('user-photo-preview')
+let hiddenInput = registElem.getElementById( "photo-url" )
 
 photoReader.onchange = event => {
     // document.cookie = "userId=; expires=" + new Date(0).toUTCString()
@@ -107,10 +102,10 @@ photoReader.onchange = event => {
     hiddenInput.value = picture
 }
 
-let submit = registrationPageElem.shadowRoot.getElementById("register-button")
+let submit = registElem.getElementById("register-button")
 
 submit.onclick = function ( event ) {
-    let formData = new FormData(registrationPageElem.shadowRoot.getElementById("reg-form"))
+    let formData = new FormData(registElem.getElementById("reg-form"))
     let result = {}
     formData.forEach (
       ( val, key ) => Object.assign ( result, { [key]: val } )
@@ -141,8 +136,7 @@ let cookie = Object.assign({},...document.cookie.split('; ')
 
 if ( cookie.userId ) {
     autentifyUser()
-    registrationPageElem.shadowRoot
-        .getElementById('autentification-pass').style = 'border: 1px solid rgb(225, 0, 0)'
+    registElem.getElementById('autentification-pass').style = 'border: 1px solid rgb(225, 0, 0)'
 }
 
 function autentifyUser() {
@@ -150,12 +144,12 @@ function autentifyUser() {
         .then(response => response.json())
             .then(response => {
                 currentUser = response
-                registrationPageElem.shadowRoot.getElementById('autentification-name')
+                registElem.getElementById('autentification-name')
                     .value = `${currentUser.userName}`
         })
 }
 
-let autentificationButton = registrationPageElem.shadowRoot.getElementById('autentification-button')
+let autentificationButton = registElem.getElementById('autentification-button')
 
 autentificationButton.onclick = event => {
     fetch(`http://localhost:3000/users/${cookie.userId}`)
